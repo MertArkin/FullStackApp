@@ -146,6 +146,19 @@ app.get("/getcontents", (req, res) => {
   });
 });
 
+/*
+For resetting auto increment in database
+
+'''
+SET @num := 0;
+UPDATE tablename SET id = @num := (@num+1);
+ALTER TABLE tablename AUTO_INCREMENT = 1;
+'''
+
+starts from 1 labels as 1, 2 , ...
+
+*/
+
 //maybe add settimeout function too
 //db.end();
 

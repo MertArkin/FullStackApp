@@ -131,14 +131,19 @@ fetch("http://localhost:3000/getcontents")
     /*Do something with data */
     console.log(data);
 
-    let stringified = JSON.stringify(data);
-    const avengers1 = data.filter((el) => el.id === 4);
-    const avengers2 = data.find((el) => el.id === 4);
-    console.log(avengers1);
-    console.log(avengers2);
+    /*
+    const filtered = data.filter((el) => el.id === 4);
+    const found = data.find((el) => el.id === 4);
+    const mapped = data.map((el) => el.id);
 
+    console.log(filtered);
+    console.log(found);
+    console.log(mapped);
+    */
+
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     data.forEach(function (item, i) {
-      //console.log("item= " + item + " p= " + i);
+      console.log("item= " + item + " p= " + i);
       for (p in item) {
         displayData += p + " : " + item[p] + " ";
         console.log(p + " : " + item[p]);
