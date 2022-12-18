@@ -1,13 +1,14 @@
+//fetch on pageload to display all the data from backend (app.js -> mysql)
+
 function getAllData() {
   fetch("https://api.github.com/users/manishmshiva")
     // Convert the response to JSON format
     .then((response) => response.json())
     // Use the JSON data to update the page
     .then((data) => {
+      //console.log(data);
       // Get the element where the data will be displayed
       const outputElement = document.getElementById("p1");
-      //console.log(data);
-
       //For clearing the lorep ipsum text to check sizizing screen el
       outputElement.innerHTML = "";
 
@@ -119,7 +120,37 @@ function getSingleData() {
     });
 }
 
+//put in window onload
 //getAllData();
+const outputElement = document.getElementById("p1");
+outputElement.innerHTML = "";
+var displayData = "";
+fetch("http://localhost:3000/getcontents")
+  .then((response) => response.json())
+  .then((data) => {
+    /*Do something with data */
+    console.log(data);
+
+    let stringified = JSON.stringify(data);
+    const avengers1 = data.filter((el) => el.id === 4);
+    const avengers2 = data.find((el) => el.id === 4);
+    console.log(avengers1);
+    console.log(avengers2);
+
+    data.forEach(function (item, i) {
+      //console.log("item= " + item + " p= " + i);
+      for (p in item) {
+        displayData += p + " : " + item[p] + " ";
+        console.log(p + " : " + item[p]);
+      }
+      displayData += "<br /><br />";
+    });
+    //console.log(displayData);
+    // = or += ??
+    outputElement.innerHTML += displayData;
+  })
+  .catch((err) => console.log(err));
+//For clearing the lorep ipsum text to check sizizing screen el
 
 document.getElementById("button1").addEventListener("click", function () {
   fetchFromServer();
@@ -134,7 +165,7 @@ const time = new Date().toLocaleDateString();
 console.log("The day is: " + time);
 
 function fetchFromServer() {
-  fetch("http://127.0.0.1:3000/test")
+  fetch("http://127.0.0.1:3000/")
     .then((response) => response.json())
     .then((data) => console.log(data) /*Do something with data */)
     .catch((err) => console.log(err));
@@ -143,8 +174,33 @@ function fetchFromServer() {
 //document.getElementById("button2").addEventListener("click", getSingleData);
 
 /*
+non-arrow version
 
+fetch('http://127.0.0.1:3000/test')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+console.log(data);
+    // Do something with data
+})
+.catch(function (err) {
+console.log("error is: " + err)
+});
 
+OR THIS 
+
+fetch('http://127.0.0.1:3000/test')
+.then((response) =>{
+    return response.json();
+})
+.then((data) => {
+console.log(data);
+    // Do something with data
+})
+.catch((err) => {
+console.log("error is: " + err)
+});
 
 
 
