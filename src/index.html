@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- frontend link http://127.0.0.1:5555/src/index.html -->
   <head>
     <link rel="stylesheet" href="mainPage.css" />
     <meta charset="UTF-8" />
@@ -8,11 +9,19 @@
     <title>OFFCandy</title>
   </head>
   <body>
+    <!-- decide br tag here -->
     <br />
-    <h3>WELCOME TO</h3>
-    <h1>OFFCandy</h1>
-    <!-- <div id="div1">HI create a THING HERE</div> -->
-    <div id="div2">
+    <!-- TITLE SECTION -->
+    <div>
+      <section>
+        <header>
+          <h3>WELCOME TO</h3>
+          <h1>OFFCandy</h1>
+        </header>
+      </section>
+    </div>
+    <!-- FORM AND SUBMIT SECTION -->
+    <div class="formSubmit">
       <form id="form1">
         <input
           id="textbox"
@@ -21,45 +30,38 @@
         NOW)"
         />
       </form>
-      <button id="button1" type="button">Click to get all data</button>
-      <button id="button2" type="button">Click to get 1 item each</button>
+      <button id="searchButton" type="button">Click to get all data</button>
     </div>
-    <div id="div3">
-      CONTENT DIV
+    <!-- CONTENT SECTION -->
+    <div class="contentSection">
       <p id="p1">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        contents. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.
       </p>
-      <p id="p2">single data here</p>
+      <p id="p2">more contents</p>
     </div>
+    <!-- VIDEO FEED SECTION -->
     <div class="VideoLibraryFeed">
+      <!-- IFRAME OR A HREF LINKS ? - decide this / how to host all in server ? -->
       <div class="video_frame">
-        <div class="video">
-          <iframe
-            class="responsive-iframe"
-            src="https://www.pornhub.com/embed/ph63723ff433e9b"
-            frameborder="0"
-            width="560"
-            height="315"
-            scrolling="no"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <iframe
+          src="https://www.pornhub.com/embed/ph63723ff433e9b"
+          frameborder="0"
+          width="560"
+          height="315"
+          scrolling="no"
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="video_frame">
-        <div class="video">
-          <iframe
-            class="responsive-iframe"
-            src="https://www.pornhub.com/embed/ph63723ff433e9b"
-            frameborder="0"
-            width="560"
-            height="315"
-            scrolling="no"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <iframe
+          src="https://www.pornhub.com/embed/ph63723ff433e9b"
+          frameborder="0"
+          width="560"
+          height="315"
+          scrolling="no"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
     <!--
@@ -75,5 +77,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-<!-- frontend link    http://127.0.0.1:5555/src/index.html -->

@@ -3,37 +3,13 @@ body {
   background-color: gray;
 }
 
-/* 
-div {
-  /* width: 50%; */
-/* height: 50%; */
-/* float: left; */
-
-/* padding: 10px; */
-
-/*
-  padding-top: 4.5%;
-  padding-bottom: 2.5%;
-  padding-left: 2%;
-  
-  height: 40px;
-  /* width: 10px; */
-
-/*
-#div1 {
-  background: #777;
-}
-*/
-
 /*MAKE SEARCH RED*/
-
 /*
 input,
 select,
 textarea {
   color: red;
 }
-
 input::placeholder {
   color: red;
   opacity: 1;
@@ -45,34 +21,29 @@ h1 {
   padding: 5px;
 }
 
-/*
-
-*/
 h3 {
   text-align: center;
 }
 
-/*
 input {
-  padding: 5px; 
+  padding: 5px;
 }
-*/
 
 div {
   margin-bottom: 10px;
 }
 
-button {
-  /* width: auto;
-  height: auto; */
+#searchButton {
+  padding: 5px;
   margin-left: 160px;
 
   /*margin gives all sides the value below*/
   /* margin: 100px; */
 }
 
-#div2 {
+.formSubmit {
   display: flex;
+  padding: 7px;
   width: 100%;
   background: #555;
   justify-content: center;
@@ -80,13 +51,14 @@ button {
 }
 
 /* CONTENT DIV */
-#div3 {
+.contentSection {
   margin-bottom: 10px;
   display: flex;
   height: auto;
   width: 100%;
-  background: #ff87ff;
-  justify-content: center;
+  background: #737373;
+  align-items: center;
+  flex-direction: column;
   /* align-items: center; */
 }
 
@@ -95,32 +67,18 @@ button {
   height: 100%;
   width: 100%;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 }
 
 .video_frame {
   display: flex;
   background-color: tomato;
-  border: 4px solid black;
+  border: 3.4px solid rgb(53, 52, 52);
   margin-left: auto;
   margin-right: auto;
-  padding: 15px;
+  padding: 12px;
 }
-
 /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-
-/*
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-*/
 
 /*
 #div4 {
