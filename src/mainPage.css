@@ -16,6 +16,11 @@ input::placeholder {
 }
 */
 
+a {
+  display: flex;
+  justify-content: center;
+}
+
 h1 {
   text-align: center;
   padding: 5px;

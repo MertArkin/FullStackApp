@@ -50,7 +50,7 @@ function fetchFromServer() {
 }
 
 document.getElementById("searchButton").addEventListener("click", function () {
-  console.log("search button cicked");
+  console.log("search button clicked");
 
   //for demo now
   //fetchFromServer();

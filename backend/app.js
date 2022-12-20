@@ -123,5 +123,22 @@ app.get("/getcontents", (req, res) => {
   });
 });
 
+//Get one content
+app.get("/getonecontent/:x", (req, res) => {
+  res.set({
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  });
+  let sql = `SELECT title, embed_link FROM contents WHERE id=${req.params.x}`;
+  let query = db.query(sql, (err, result) => {
+    if (err) throw err;
+    console.log(result);
+    //res.send("contents fetched...");
+    //res.send(result);
+    let stringified = JSON.stringify(result);
+    res.send(stringified + "\nnumber in url: " + req.params.x);
+  });
+});
+
 //db.end();
 //maybe add settimeout function too
