@@ -71,17 +71,19 @@ div {
   display: flex;
   height: 100%;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
 .video_frame {
   display: flex;
-  background-color: tomato;
-  border: 3.4px solid rgb(53, 52, 52);
+  flex-wrap: wrap;
+  /* background-color: tomato; */
+  border: 3.4px solid rgb(37, 34, 34);
   margin-left: auto;
   margin-right: auto;
-  padding: 12px;
+  padding: 17px;
 }
 /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 

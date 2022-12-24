@@ -99,7 +99,7 @@ app.get("/createcontentstable", (req, res) => {
 
 //Insert contents
 app.get("/addcontentone", (req, res) => {
-  let content = { title: "video1", embed_link: "linkvideo" };
+  //let content = { title: "video1", embed_link: "linkvideo" };
   let sql = "INSERT INTO contents SET ?";
   let query = db.query(sql, content, (err, result) => {
     if (err) throw err;
@@ -124,19 +124,19 @@ app.get("/getcontents", (req, res) => {
 });
 
 //Get one content
-app.get("/getonecontent/:x", (req, res) => {
+app.get("/getonecontent/:id", (req, res) => {
   res.set({
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
   });
-  let sql = `SELECT title, embed_link FROM contents WHERE id=${req.params.x}`;
+  let sql = `SELECT title, embed_link, thumbnail FROM contents WHERE id=${req.params.id}`;
   let query = db.query(sql, (err, result) => {
     if (err) throw err;
-    console.log(result);
+    //console.log(result);
     //res.send("contents fetched...");
-    //res.send(result);
+    res.json(result);
     let stringified = JSON.stringify(result);
-    res.send(stringified + "\nnumber in url: " + req.params.x);
+    //res.send(stringified + "\nnumber in url: " + req.params.id);
   });
 });
 
