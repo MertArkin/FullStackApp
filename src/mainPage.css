@@ -8,6 +8,10 @@ body {
   min-height: 100vh;
 }
 
+.topbar {
+  background-color: black;
+  height: 15px;
+}
 /*MAKE SEARCH RED*/
 /*
 input,
@@ -96,6 +100,7 @@ div {
   /* flex: 1; */
 }
 
+/* video titles */
 .video_frame p {
   display: flex;
   flex-direction: column;
@@ -110,6 +115,39 @@ div {
   /* background-color: rgb(141, 106, 145); */
 }
 
+/* above footer */
+.bottom {
+  border: 2.5px solid rgb(37, 34, 34);
+  text-align: left;
+  justify-content: center;
+  /* align-items: center; */
+  /* background-color: rgb(71, 133, 29); */
+  font-size: 15px;
+}
+
+.logo {
+  /* flex: 1 1 auto; */
+  float: left;
+  transform: translateY(100%);
+  background-color: rgb(71, 133, 29);
+}
+
+/* main information support */
+.FooterMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+/*
+.main,
+.information,
+.support {
+  background-color: rgb(97, 97, 97);
+}
+*/
+
 img {
   display: block;
   max-width: 100%;
@@ -122,7 +160,7 @@ footer {
   margin-top: auto;
   border: 2.5px solid rgb(37, 34, 34);
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 }
 /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 

@@ -53,9 +53,10 @@ async function fetchContent() {
 
   */
 
+  //thumbnails
   mapped2.forEach(function (e, i) {
-    console.log(e);
-    console.log(i);
+    //console.log(e);
+    //console.log(i);
     outputElement.innerHTML += `
       <div class="video_frame">
       <a href="${`video.html?id=${i}`}"> <img id=${i} src=${e} alt="Thumbnail" width="190" height="110"></a>
@@ -95,21 +96,86 @@ async function fetchContent() {
 
 fetchContent();
 
+/*
 //FETCH the running server link and display everything on the web page
 //THE METHOD FOR SENDING BACKEND REQUESTS FROM HTML PAGE
+//Do something with data
+//check notes for multiple parameters on these functions
 function fetchFromServer() {
   fetch("http://127.0.0.1:3000/")
     .then((response) => response.json())
     .then(
       (data) => console.log(data)
-      /*Do something with data */
-      /*check notes for multiple parameters on these functions*/
+
     )
     .catch((err) => console.log(err));
 }
+*/
+
+var textBox = document.getElementById("textbox");
+function searchResult() {
+  var value = textBox.value;
+  if (value == "") {
+    console.log("WRONG INPUT, cant be empty");
+    return;
+  }
+  fetch("http://localhost:3000/getmultiplecontent/" + value)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log("returned search: ", data);
+      /*Do something with data */
+      /*check notes for multiple parameters on these functions*/
+      outputElement.innerHTML = "";
+      const mapped3 = data.map((el) => el.title);
+
+      data.forEach(function (item, i) {
+        //console.log(item);
+        outputElement.innerHTML += `
+      <div class="video_frame">
+      <a href="${`video.html?id=${item.id - 1}`}"> <img id=${item.id} src=${
+          item.thumbnail
+        } alt="Thumbnail" width="190" height="110"></a>
+        <p>${mapped3[i]}</p>
+      </div>
+      `;
+      });
+    })
+    .catch(function (err) {
+      console.log("error is: " + err);
+    });
+  //const title = video.map((el) => el.title);
+  //console.log(title);
+
+  /*
+  title.forEach(function (e) {
+    console.log(e);
+    if (textBox.value == " ") {
+      return;
+    }
+    if (e.includes(value)) {
+      console.log(e); // true
+    }
+  });
+  */
+}
 
 document.getElementById("searchButton").addEventListener("click", function () {
-  console.log("search button clicked");
+  //console.log("search button clicked");
+  searchResult();
+  //USE FUNCTIONS FOR MOST OF THE RENDERING !!! - 24/12/2022
+
+  /*
+  video.forEach(function (item, i) {
+    for (p in item) {
+      displayData += item[p] + " <br /><br />";
+      console.log(p + " : " + item[p] + "\n");
+    }
+    console.log("\n");
+    displayData += "<br />";
+  });
+  */
 
   //for demo now
   //fetchFromServer();

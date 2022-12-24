@@ -52,5 +52,5 @@ footer {
   margin-top: auto;
   border: 2.5px solid rgb(37, 34, 34);
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 }

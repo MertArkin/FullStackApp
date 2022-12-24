@@ -148,5 +148,20 @@ app.get("/getonecontent/:id", (req, res) => {
   });
 });
 
+//Get multiple contents
+app.get("/getmultiplecontent/:searchparam", (req, res) => {
+  res.set({
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  });
+  let sql = `SELECT * FROM contents WHERE title LIKE '%${req.params.searchparam}%'`;
+  let query = db.query(sql, (err, result) => {
+    if (err) throw err;
+    //console.log(result);
+    //res.send("contents fetched...");
+    res.json(result);
+  });
+});
+
 //db.end();
 //maybe add settimeout function too
