@@ -23,7 +23,8 @@ async function fetchContent() {
 
   const mapped = video.map((el) => el.embed_link);
   const mapped2 = video.map((el) => el.thumbnail);
-  console.log(mapped2);
+  const mapped3 = video.map((el) => el.title);
+  //console.log(mapped3[0]);
 
   /*
     const filtered = data.filter((el) => el.id === 4);
@@ -57,19 +58,22 @@ async function fetchContent() {
     console.log(i);
     outputElement.innerHTML += `
       <div class="video_frame">
-      <img id='${i}' src='${e}' alt="Thumbnail" width="170" height="100">
+      <a href="${`video.html?id=${i}`}"> <img id=${i} src=${e} alt="Thumbnail" width="190" height="110"></a>
+      <p>${mapped3[i]}</p>
       </div>
       `;
   });
 
+  /*
   const thumbnails = document.getElementsByClassName("video_frame");
   const isPressed = (e) => {
     console.log(e.target.id); // Get ID of Clicked Element
-    window.location.href = `video.html?id='${e.target.id}'`;
   };
   for (let t of thumbnails) {
     t.addEventListener("click", isPressed);
   }
+  */
+
   /*
       //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
       data.forEach(function (item, i) {

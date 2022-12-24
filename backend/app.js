@@ -70,13 +70,16 @@ db.connect(function (err) {
   console.log("mysql connected");
 });
 
-//Create database
-app.get("/createdb", (req, res) => {
-  /*
+//Commented for now until release - 24/12/2022
+/*
   kullan for database stuff
   const time = Date.now();
   console.log(time);
-  */
+*/
+/*
+//Create database
+app.get("/createdb", (req, res) => {
+
   let sql = "CREATE DATABASE nodemysql";
   db.query(sql, (err, result) => {
     if (err) throw err;
@@ -84,7 +87,9 @@ app.get("/createdb", (req, res) => {
     res.send("Database created...");
   });
 });
+*/
 
+/*
 //Create a table
 //DOES WORK (WHAT QUERY ?)
 app.get("/createcontentstable", (req, res) => {
@@ -96,7 +101,9 @@ app.get("/createcontentstable", (req, res) => {
     res.send("contents table created...");
   });
 });
+*/
 
+/*
 //Insert contents
 app.get("/addcontentone", (req, res) => {
   //let content = { title: "video1", embed_link: "linkvideo" };
@@ -107,6 +114,7 @@ app.get("/addcontentone", (req, res) => {
     res.send("content one added...");
   });
 });
+*/
 
 //Get contents
 app.get("/getcontents", (req, res) => {
@@ -135,7 +143,7 @@ app.get("/getonecontent/:id", (req, res) => {
     //console.log(result);
     //res.send("contents fetched...");
     res.json(result);
-    let stringified = JSON.stringify(result);
+    //let stringified = JSON.stringify(result);
     //res.send(stringified + "\nnumber in url: " + req.params.id);
   });
 });

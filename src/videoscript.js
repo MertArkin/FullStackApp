@@ -14,10 +14,12 @@ console.log("id = " + id);
 const encodedComponent = decodeURIComponent(id);
 console.log(encodedComponent);
 
+/*
 const str1 = encodedComponent.replaceAll("'", " ");
 console.log(str1);
+*/
 
-const result = Number(str1) + 1;
+const result = Number(encodedComponent) + 1;
 
 const outputElement = document.getElementById("p1");
 const outputElement2 = document.getElementById("p2");
@@ -45,6 +47,9 @@ async function getResults() {
   const mapped = video.map((el) => el.embed_link);
   //console.log(mapped.toString());
 
+  const mapped2 = video.map((el) => el.title);
+  console.log(mapped2.toString());
+
   /*
   const title = video.map((el) => el.title);
   console.log(title.toString());
@@ -57,12 +62,14 @@ async function getResults() {
     <iframe
     src='${e}'
     frameborder="0"
-    width="330"
-    height="180"
+    width="580"
+    height="350"
     scrolling="no"
     allowfullscreen>
     </iframe>
+    <p>${mapped2.toString()}</p>
     </div>
+
     `;
   });
 
