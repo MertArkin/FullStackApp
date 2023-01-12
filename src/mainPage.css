@@ -116,6 +116,7 @@ div {
 }
 
 /* above footer */
+/* make it stay bottom when there is no content */
 .bottom {
   border: 2.5px solid rgb(37, 34, 34);
   text-align: left;
