@@ -25,6 +25,7 @@ starts from 1 labels as 1, 2 , ...
 
 const express = require("express");
 const mysql = require("mysql");
+
 /*
 DATABASE
 Created database using this link
@@ -43,6 +44,8 @@ const db = mysql.createConnection({
 const app = express();
 //app.use = express.json();
 
+app.use("/css", express.static(__dirname + "/offcandyv2/css"));
+
 //Start server
 app.listen("3000", () => {
   console.log("server started on port 3000");
@@ -52,12 +55,19 @@ app.listen("3000", () => {
 //USE FOR SERVER GET REQUESTS
 app.get("/", (req, res) => {
   res.set({
-    "Content-Type": "application/json",
+    "Content-Type": "text/html",
     "Access-Control-Allow-Origin": "*",
   });
   //res.send doesnt work - use res.json | bak farklara
   //res.send("Hello World! - THIS IS YOUR BACKEND");
-  res.json("Hi this is the server");
+  //res.json("Hi this is the server");
+  console.log(__dirname);
+  res.sendFile(__dirname + "/offcandyv2/loginPage.html");
+
+  /*
+  maybe use res.redirect("/index.html");
+  try with button click and username
+  */
 });
 
 //Connect to database
