@@ -59,8 +59,9 @@ async function fetchContent() {
     //console.log(i);
     outputElement.innerHTML += `
       <div class="video_frame">
-        <a href="${`video.html?id=${i}`}"> <img class="videoPreview" id=${i} src=${e} alt="Thumbnail" width="190" height="110"></a>
-        <h2 id="videoTitle">${mapped3[i]}</h2>
+        <a href="${`videoPage.html?id=${i}`}"> <img class="videoPreview" id=${i} src=${e} alt="Thumbnail" width="312" height="175"></a>
+        <p style="margin: 0;" id="videoTitle">${mapped3[i]}</p>
+        <p style="color: white; margin: 5px;">- | - artist - | - owner - | -</p>
       </div>
       `;
   });

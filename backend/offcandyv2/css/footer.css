@@ -1,0 +1,45 @@
+.FooterMenu {
+  /* background-color: black; */
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  border-style: solid;
+  border-width: 1.5px 0px 1.5px 0px;
+  border-color: white;
+
+  justify-content: center;
+  gap: 100px;
+}
+
+footer p {
+  text-align: center;
+  color: #fb2576;
+  font: 10px sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.FooterMenu a {
+  color: #fb2576;
+  text-decoration: none;
+  font: 15px sans-serif;
+}
+
+.FooterMenu h4 {
+  color: white;
+  font: 18px anton;
+  margin-bottom: -2px;
+}
+
+.main {
+  margin-top: -20px;
+}
+
+.information {
+  margin-top: -20px;
+}
+
+.support {
+  margin-top: -20px;
+}

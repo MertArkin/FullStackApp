@@ -1,0 +1,116 @@
+@font-face {
+  font-family: anton;
+  src: url(font/Anton-Regular.ttf);
+}
+@font-face {
+  font-family: gothicBold;
+  src: url(gothic_bold.ttf);
+}
+@font-face {
+  font-family: gothic;
+  src: url(gothic_regular.ttf);
+}
+
+body {
+  background-color: #1b1b1b;
+  /* background: linear-gradient(to top, #000000, #8d103f);
+    background-attachment: fixed; */
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  background-color: black;
+  height: 13px;
+}
+
+.logoBox a {
+  text-decoration: none;
+}
+
+.parent {
+  margin-left: 110px;
+  margin-right: 110px;
+}
+
+.navbar {
+  background-image: linear-gradient(180rad, #000000 25%, #fb2576 75%);
+  /* top right bottom left */
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: end space-between;
+}
+
+.logoBox {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+h1 {
+  background-color: #000000;
+  color: white;
+  font-family: gothicBold, sans-serif;
+  font-size: 38px;
+  margin: 0;
+  padding-top: 10px;
+  padding-right: 20px;
+  height: 36px;
+  /* margin-bottom: -10px; */
+}
+
+/* .muteBox{
+      background-color: red; 
+  } 
+  */
+#mutebutton {
+  display: block;
+  width: 50px;
+
+  box-shadow: 2px 2px 2px 2px #fb2576;
+}
+
+.searchBox {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 15px;
+}
+#searchInput {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+::placeholder {
+  color: #fb2576;
+  opacity: 0.7;
+}
+/* input, textarea {
+      Changes background color on the text input
+      background-color : #d1d1d1; 
+    
+  } */
+input,
+select {
+  /* changes color on the inputted text */
+  color: #fb2576;
+}
+#searchButton {
+  background-color: #8d103f;
+  color: white;
+  border: 2px;
+  font-family: gothicBold, sans-serif;
+  font-size: 22.5px;
+}
+
+#searchButton:hover {
+  background-color: #fb2576;
+  color: white;
+}

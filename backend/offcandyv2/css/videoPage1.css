@@ -1,0 +1,51 @@
+.VideoLibraryFeed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2.5px solid rgb(37, 34, 34);
+}
+
+.video_frame {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.video_frame p {
+  word-break: break-all;
+  text-align: center;
+  color: white;
+  font: 56px sans-serif;
+  margin: 0;
+  /* border: 2.4px solid rgb(37, 34, 34); */
+  /* flex-direction: row; */
+  /* margin-top: 12px; */
+  /* background-color: rgb(141, 106, 145); */
+}
+
+.menu p {
+  font: 15px sans-serif;
+  color: gray;
+  text-align: left;
+}
+
+iframe {
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font: 20px sans-serif;
+  background-color: gray;
+}
+
+#quality {
+  font: 20px sans-serif;
+  background-color: gray;
+}
+#duration {
+  font: 20px sans-serif;
+  background-color: gray;
+}

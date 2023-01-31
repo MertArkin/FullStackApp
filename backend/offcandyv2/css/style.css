@@ -10,10 +10,10 @@
   font-family: gothic;
   src: url(gothic_regular.ttf);
 }
-body {
+/* body {
   background-color: #1b1b1b;
   /* background: linear-gradient(to top, #000000, #8d103f);
-  background-attachment: fixed; */
+  background-attachment: fixed;
   margin: 0;
 
   display: flex;
@@ -21,9 +21,23 @@ body {
   min-height: 100vh;
 }
 
+.topbar {
+  background-color: black;
+  height: 13px;
+}
+
+.logoBox a {
+  text-decoration: none;
+}
+
+.parent {
+  margin-left: 110px;
+  margin-right: 110px;
+}
+
 .navbar {
   background-image: linear-gradient(180rad, #000000 25%, #fb2576 75%);
-  /* top right bottom left */
+  /* top right bottom left
   padding: 10px 0 10px 0;
   display: flex;
   flex-direction: row;
@@ -46,21 +60,23 @@ h1 {
   margin: 0;
   padding-top: 10px;
   padding-right: 20px;
-  height: 40px;
-  /* margin-bottom: -10px; */
+  height: 36px;
+  /* margin-bottom: -10px; 
 }
 
-/* .muteBox{
+.muteBox{
     background-color: red; 
 } 
-*/
+
 #mutebutton {
   display: block;
   width: 50px;
+
+  box-shadow: 2px 2px 2px 2px #fb2576;
 }
 
 .searchBox {
-  /* background-color: green; */
+  /* background-color: green; 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,24 +95,25 @@ h1 {
     Changes background color on the text input
     background-color : #d1d1d1; 
   
-} */
+}
 input,
 select {
-  /* changes color on the inputted text */
+  /* changes color on the inputted text 
   color: #fb2576;
 }
 #searchButton {
-  background-color: #fb2576;
+  background-color: #8d103f;
   color: white;
   border: 2px;
   font-family: gothicBold, sans-serif;
   font-size: 22.5px;
 }
+
 #searchButton:hover {
-  background-color: #8d103f;
+  background-color: #fb2576;
   color: white;
 }
-
+*/
 .tagbar {
   border-style: solid;
   border-width: 1.5px 0px 1.5px 0px;
@@ -105,27 +122,45 @@ select {
 }
 
 .tagbox {
-  /* button ayarlari */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* background-color: white; */
-  align-items: center;
-  height: auto;
-  margin-bottom: 30px;
-  justify-content: space-evenly;
+  margin-left: -40px;
+  margin-bottom: -9.86px;
 
-  /* gap: 15px; */
+  /* display: flex;
+  flex-direction: row; */
+  /* padding: 10px; */
+  /* float: left; */
+  /* button ayarlari */
+  /* color: white; */
+  /* vertical-align: top; */
+  /* background-color: white; */
+  /* gap: 15px; 
+  */
 }
 
+.tagbox ul li {
+  display: inline-block;
+  background-color: #000000;
+  padding: 1px 10px;
+  margin-bottom: 10px;
+}
+
+.tagbox ul a {
+  text-decoration: none;
+  color: white;
+  font: 16px sans-serif;
+}
+.tagbox ul li:hover {
+  background-color: #fb2576;
+}
 .videobox {
-  justify-content: center;
+  /* justify-content: left; */
   margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 20px;
+  row-gap: 20px;
   /* background-color: #9f174b; */
 }
 
@@ -134,36 +169,25 @@ select {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-
   /* background-color: tomato; */
   border: 2.5px solid rgb(37, 34, 34);
   /* margin-left: auto;
   margin-right: auto; */
   /* padding: 10px; */
-  width: 13%;
+  /* width: 18%; */
+  width: 18.7%;
   /* flex: 1; */
 }
 
 .tagbox a {
   text-decoration: none;
 }
-.tagbutton {
-  width: 220px;
-  height: 35px;
-  position: relative;
-  box-shadow: 4px 3px 8px 1px #000000;
-}
+
 .image {
   position: absolute;
   top: -30px;
   left: 0;
   height: 80px;
-}
-.tagtitle {
-  font-family: anton;
-  color: white;
-  font-size: 25px;
-  text-align: right;
 }
 
 .button1 {
@@ -186,8 +210,8 @@ select {
   background: linear-gradient(to left, #000000, #ff9924);
 } */
 
-.FooterMenu {
-  /* background-color: black; */
+/* .FooterMenu {
+  /* background-color: black; 
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -218,7 +242,7 @@ footer p {
   color: white;
   font: 18px anton;
   margin-bottom: -2px;
-}
+} */
 
 /* footer {
   font: 14px italic sans-serif;
@@ -246,7 +270,7 @@ footer p {
 
 #videoTitle {
   font: 15px arial;
-  color: white;
+  /* color: white; */
 
   /* Extra Design -GT*/
   color: #ff6aa3;
@@ -258,7 +282,7 @@ footer p {
   text-align: center;
 }
 
-.main {
+/* .main {
   margin-top: -20px;
 }
 
@@ -268,4 +292,4 @@ footer p {
 
 .support {
   margin-top: -20px;
-}
+} */
